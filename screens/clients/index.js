@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import {Text, View, StyleSheet, FlatList, SafeAreaView, SafeAreaViewBase} from 'react-native';
+import {Text, View, StyleSheet, FlatList} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import SearchField from './components/SearchFiled';

@@ -1,5 +1,6 @@
 import React from 'react';
-import {View, Text, StyleSheet, SafeAreaView, SafeAreaViewComponent, SafeAreaViewBase} from 'react-native';
+import {View, Text, StyleSheet} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import InputField from "./components/InputField";
 import ButtonAdd from "./components/ButtonAdd";

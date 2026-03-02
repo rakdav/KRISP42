@@ -4,15 +4,13 @@ import {
     Text,
     StyleSheet,
     TouchableOpacity,
-    Image,
-    Dimensions, SafeAreaViewBase, SafeAreaView,
+    Image
 } from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 import ButtonCall from './components/ButtonCall';
 import ButtonChat from './components/ButtonChat';
 import ButtonMore from './components/ButtonMore';
-
-const SCREEN_WIDTH = Dimensions.get('window').width;
 
 export default function Profile({navigation, route}) {
 
@@ -53,7 +51,7 @@ export default function Profile({navigation, route}) {
                 <Text style={styles.name}>{client.name}</Text>
                 <Text style={[styles.text, { alignSelf: 'center' }]}>{client.city}</Text>
 
-                <View style={styles.containerbutton}>
+                <View style={styles.containerButton}>
                     <ButtonChat text="Чат" />
                     <ButtonCall text="Звонок" />
                 </View>
@@ -102,7 +100,7 @@ const styles = StyleSheet.create({
         color: '#A3A3A3',
         marginLeft: 24,
     },
-    containerbutton: {
+    containerButton: {
         justifyContent: 'space-between',
         flexDirection: 'row',
     },
