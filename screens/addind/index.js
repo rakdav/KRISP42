@@ -1,9 +1,10 @@
 import React from 'react';
-import {View, Text, StyleSheet, SafeAreaView} from 'react-native';
+import {View, Text, StyleSheet, SafeAreaView, SafeAreaViewComponent, SafeAreaViewBase} from 'react-native';
 
 import Button from './components/ButtonAdd';
 import InputField from "./components/InputField";
 import ButtonAdd from "./components/ButtonAdd";
+import StrelaNazad from "../../components/StrelaNazad";
 export default function Adding({navigation}) {
     const [stateFoto, setFoto] = React.useState('')
     const [stateFIO, setFIO] = React.useState('')
@@ -16,7 +17,8 @@ export default function Adding({navigation}) {
         navigation.navigate('Clients',{newClient:client});
     };
     return (
-        <SafeAreaView style={{flex:1}}>
+        <SafeAreaViewBase style={{flex:1}}>
+            <StrelaNazad navigation={navigation} />
             <View style={styles.container}>
                 <Text style={styles.addNew}>Добавить нового</Text>
                 <InputField
@@ -51,7 +53,7 @@ export default function Adding({navigation}) {
                     onPress={onAddClient}
                     />
             </View>
-        </SafeAreaView>
+        </SafeAreaViewBase>
     )
 }
 const styles = StyleSheet.create({
