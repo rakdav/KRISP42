@@ -10,7 +10,6 @@ import {
 
 
 export default function StrelaNazad({navigation}) {
-    console.log(navigation);
     return (
 
         <View

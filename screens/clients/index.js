@@ -84,7 +84,7 @@ export default function Clients({ navigation, route }) {
     };
 
     return (
-        <SafeAreaViewBase
+        <SafeAreaView
             style={{
                 flex: 1,
                 backgroundColor: '#ecf0f1',
@@ -114,7 +114,7 @@ export default function Clients({ navigation, route }) {
                 text="Добавить нового"
                 onPress={() => navigation.navigate('Adding')}
             />
-        </SafeAreaViewBase>
+        </SafeAreaView>
     );
 }
 
@@ -126,6 +126,5 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         borderRadius: 16,
         resizeMode: 'contain',
-        //  backgroundColor: 'green',
     },
 });

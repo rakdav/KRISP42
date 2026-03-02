@@ -5,7 +5,7 @@ import {
     StyleSheet,
     TouchableOpacity,
     Image,
-    Dimensions, SafeAreaViewBase,
+    Dimensions, SafeAreaViewBase, SafeAreaView,
 } from 'react-native';
 
 import ButtonCall from './components/ButtonCall';
@@ -18,7 +18,7 @@ export default function Profile({navigation, route}) {
 
     const {client} = route.params;
     return (
-        <SafeAreaViewBase style={{ flex: 1 }}>
+        <SafeAreaView style={{ flex: 1 }}>
             <View style={styles.container}>
                 <View
                     style={{
@@ -47,7 +47,6 @@ export default function Profile({navigation, route}) {
                             borderRadius: 100,
                         }}
                         source={client.link}
-                        //source={require('./assets/Client.png')}
                     />
                 </View>
 
@@ -68,7 +67,7 @@ export default function Profile({navigation, route}) {
 
                 <ButtonMore text="Показать больше" />
             </View>
-        </SafeAreaViewBase>
+        </SafeAreaView>
     );
 }
 

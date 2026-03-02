@@ -1,31 +1,30 @@
 import React from 'react';
 import {View, Text, StyleSheet, SafeAreaView, SafeAreaViewComponent, SafeAreaViewBase} from 'react-native';
 
-import Button from './components/ButtonAdd';
 import InputField from "./components/InputField";
 import ButtonAdd from "./components/ButtonAdd";
 import StrelaNazad from "../../components/StrelaNazad";
 export default function Adding({navigation}) {
-    const [stateFoto, setFoto] = React.useState('')
+    const [statePhoto, setPhoto] = React.useState('')
     const [stateFIO, setFIO] = React.useState('')
     const [statePhone, setPhone] = React.useState('')
-    const [stateSity, setSity] = React.useState('')
+    const [stateCity, setCity] = React.useState('')
     const [stateHobby, setHobby] = React.useState('')
     const [stateCount,setCount] = React.useState(0)
     const  onAddClient=()=>{
-        const client={name:stateFIO,city:stateSity};
+        const client={name:stateFIO,city:stateCity};
         navigation.navigate('Clients',{newClient:client});
     };
     return (
-        <SafeAreaViewBase style={{flex:1}}>
+        <SafeAreaView style={{flex:1}}>
             <StrelaNazad navigation={navigation} />
             <View style={styles.container}>
                 <Text style={styles.addNew}>Добавить нового</Text>
                 <InputField
                     title="Фото"
                     placeholder="Вставьте ссылку на фото"
-                    onChangeText={setFoto}
-                    text={stateFoto}/>
+                    onChangeText={setPhoto}
+                    text={statePhoto}/>
                 <InputField
                     title="ФИО"
                     placeholder="Введите фамилию и имя"
@@ -39,8 +38,8 @@ export default function Adding({navigation}) {
                 <InputField
                     title="Город"
                     placeholder="Выберите город"
-                    onChangeText={setSity}
-                    text={stateSity}/>
+                    onChangeText={setCity}
+                    text={stateCity}/>
                 <InputField
                     title="Био"
                     placeholder="Укажите хобби, интересы, образование и стаж работы"
@@ -53,7 +52,7 @@ export default function Adding({navigation}) {
                     onPress={onAddClient}
                     />
             </View>
-        </SafeAreaViewBase>
+        </SafeAreaView>
     )
 }
 const styles = StyleSheet.create({
