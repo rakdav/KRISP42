@@ -4,7 +4,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 
 import InputField from "./components/InputField";
 import ButtonAdd from "./components/ButtonAdd";
-import StrelaNazad from "../../components/StrelaNazad";
+import Back from "../../components/Back";
 export default function Adding({navigation}) {
     const [statePhoto, setPhoto] = React.useState('')
     const [stateFIO, setFIO] = React.useState('')
@@ -18,7 +18,7 @@ export default function Adding({navigation}) {
     };
     return (
         <SafeAreaView style={{flex:1}}>
-            <StrelaNazad navigation={navigation} />
+            <Back navigation={navigation} />
             <View style={styles.container}>
                 <Text style={styles.addNew}>Добавить нового</Text>
                 <InputField

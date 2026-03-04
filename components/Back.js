@@ -6,7 +6,7 @@ import {
 } from 'react-native';
 
 
-export default function StrelaNazad({navigation}) {
+export default function Back({navigation}) {
     return (
 
         <View
