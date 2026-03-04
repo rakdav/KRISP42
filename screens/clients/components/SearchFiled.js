@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, StyleSheet, TextInput} from 'react-native';
+import {View, StyleSheet, TextInput, Image} from 'react-native';
 export default function SearchFiled({filter,setFilter}){
     return (
         <View style={styles.search}>

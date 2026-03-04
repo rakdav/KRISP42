@@ -1,5 +1,5 @@
 import React from 'react';
-import {Text, StyleSheet, Dimensions, TouchableOpacity, View, TextInput} from 'react-native';
+import {Text, StyleSheet, Dimensions, View, TextInput} from 'react-native';
 const SCREEN_WIDTH=Dimensions.get('window').width;
 
 export default function InputField(props){
